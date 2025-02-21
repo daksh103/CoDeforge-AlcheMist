@@ -14,15 +14,19 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-# Load API keys from config.json
-with open("config.json", "r") as config_file:
-    config = json.load(config_file)
 
-# Choose a random Groq API key
-groq_api_keys = config.get("GROQ_API_KEY").values()
+# Load API keys from secrets
+e2b_api_key = st.secrets["E2B_API_KEY"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+google_api_key = st.secrets["GOOGLE_API_KEY"]
+
+# Get Groq API keys and pick a random one
+groq_api_keys = st.secrets["GROQ_API_KEY"].values()
 selected_groq_api_key = random.choice(list(groq_api_keys))
 
-os.environ["GOOGLE_API_KEY"] = config.get("GOOGLE_API_KEY")
+# Set API keys as environment variables if needed
+os.environ["GOOGLE_API_KEY"] = google_api_key
+
 st.set_page_config(page_title="CoDeforge AlcheMist", page_icon="⚒️")
 st.title("🛠️ CoDeforge AlcheMist")
 
