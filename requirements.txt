@@ -1,0 +1,10 @@
+streamlit
+fpdf
+pillow
+langchain
+langchain_groq
+langchain_core
+langchain_community
+faiss-cpu
+pypdf
+google-generativeai
