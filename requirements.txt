@@ -7,6 +7,6 @@ langchain_community==0.0.25
 faiss-cpu==1.7.4
 pypdf==3.17.3
 google-generativeai==0.4.0
-groq==0.4.2  
+groq==0.9.0
 streamlit==1.37.0
 langchain_google_genai==0.0.8
