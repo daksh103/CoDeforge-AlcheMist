@@ -1,4 +1,3 @@
-
 fpdf
 pillow
 langchain
