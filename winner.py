@@ -240,7 +240,7 @@ def process_uploaded_pdf(uploaded_file):
 
     pdf_file_path = generate_pdf(questions, solutions)
     with open(pdf_file_path, "rb") as pdf_file:
-        st.download_button("📥 Download Solutions PDF", pdf_file, "generated_code_solutions.pdf", "application/pdf")
+        st.download_button("📥 Download Solutions PDF", pdf_file, "solutions.pdf", "application/pdf")
 
     st.write("⏱ **Response Time for PDF Processing:**", elapsed_time, "seconds")
     st.write("⏱ **Response Time for Code Generation:**", elapsed_time_code, "seconds")
