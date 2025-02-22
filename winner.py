@@ -166,7 +166,7 @@ def generate_pdf(questions, solutions):
         pdf.ln(2)
 
         pdf.set_font("Courier", size=10)
-        pdf.multi_cell(0, 5, "Code:", border=1)
+        pdf.multi_cell(0, 5, "Code:", border=0)
         pdf.multi_cell(0, 5, solutions[i][0])
         pdf.ln(2)
 
