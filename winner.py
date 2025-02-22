@@ -179,7 +179,7 @@ def generate_pdf(questions, solutions):
 
         pdf.ln(10)
 
-    pdf_file_path = "generated_code_solutions.pdf"
+    pdf_file_path = "solutions.pdf"
     pdf.output(pdf_file_path)
     return pdf_file_path
 
